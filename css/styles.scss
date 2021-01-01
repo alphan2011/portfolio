@@ -7,16 +7,25 @@ $color-5: #4f4f51;
 $color-6: #ffffff;
 $color-7: #000000;
 
+$md-font: 6.4rem;
+$lg-font: 8rem;
+$xl-font: 9.6rem;
+
 // Mix-ins
 @mixin lgHeading {
   font-family: "Spartan", sans-serif;
-  font-size: 3.6rem;
+  font-size: 3.2rem;
   font-weight: 700;
 }
 @mixin smHeading {
   font-family: "Spartan", sans-serif;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 300;
+  text-transform: uppercase;
+}
+@mixin xsHeading {
+  font-size: 0.8rem;
+  font-weight: 700;
   text-transform: uppercase;
 }
 @mixin bgImg {
@@ -38,7 +47,13 @@ $color-7: #000000;
   }
 }
 
+// CUSTOM CSS***********************
+
 //Global styles
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
 }
@@ -53,10 +68,6 @@ body {
 
 //Home/Header + Nav
 section#home {
-  height: 100vh;
-  .title {
-    margin: 0 auto;
-  }
   h1 {
     @include lgHeading();
     color: $color-1;
@@ -64,9 +75,6 @@ section#home {
   h2 {
     color: $color-3;
     font-size: 1.6rem;
-  }
-  .arrows {
-    margin-top: 3rem;
   }
 }
 
@@ -78,14 +86,11 @@ section#home {
 
 //About
 section#about {
-  width: 100%;
-  margin: auto;
   padding: 9rem 0;
   background-color: $color-7;
   .profile {
     width: 100%;
     max-width: 30rem;
-    margin: 0 auto 3rem 0;
     animation-name: grow;
     animation-duration: 3s;
     animation-timing-function: ease-in-out;
@@ -98,17 +103,11 @@ section#about {
     color: $color-4;
     margin-bottom: 6rem;
   }
-  article {
-    max-width: 30rem;
-    margin: 0 0 0 auto;
-  }
   h3 {
     @include smHeading();
     color: $color-1;
-    margin-bottom: 1rem;
   }
   p {
-    font-weight: 700;
     color: $color-6;
   }
   .btn:hover {
@@ -119,25 +118,197 @@ section#about {
     color: $color-6;
     @include button();
   }
-  .arrows {
-    display: block;
-    margin: 3rem auto 0 auto;
-  }
 }
 
 //Projects
 section#projects {
-  width: 100%;
-  margin: auto;
   padding: 9rem 0;
-  // background: url(../images/circle.svg) no-repeat;
-  // background-size: cover;
+  background-color: $color-1;
   h2 {
     @include lgHeading();
-    color: $color-2;
+    color: $color-6;
     margin-bottom: 6rem;
+  }
+  h3 {
+    @include smHeading();
+    color: $color-2;
+    margin-bottom: 3rem;
+  }
+  img {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  h4 {
+    @include xsHeading();
+    color: $color-6;
+  }
+  .btn:hover {
+    background-color: $color-4;
+    color: $color-6;
+  }
+  .btn-secondary {
+    background-color: $color-2;
+    border-radius: 0px;
+    border: none;
+    margin-bottom: 3rem;
+  }
+  .carousel-control-next,
+  .carousel-control-prev {
+    top: inherit;
+    bottom: inherit;
+  }
+  .arrows {
+    margin: 12rem auto 0;
   }
 }
 //Contact
+section#contact {
+  padding: 9rem 0;
+  h2 {
+    @include lgHeading();
+    color: $color-5;
+  }
+  p {
+    @include xsHeading();
+    color: $color-4;
+    margin-bottom: 6rem;
+  }
+  form {
+    max-width: 30rem;
+  }
+  input,
+  textarea {
+    margin-bottom: 1rem;
+    border-radius: 0;
+  }
+  textarea {
+    height: 9rem;
+  }
+  .btn-outline-secondary {
+    color: $color-1;
+    border-color: $color-1;
+  }
+  .btn-outline-secondary:hover {
+    color: $color-6;
+    background-color: $color-1;
+  }
+  .btn-secondary {
+    color: $color-6;
+    background-color: $color-1;
+    border-color: $color-1;
+  }
+  .btn-secondary:hover {
+    background-color: #f37862;
+    border-color: #f37862;
+  }
+}
 
 //Footer
+footer {
+  background-color: $color-7;
+  img {
+    max-width: 3rem;
+  }
+  p {
+    color: $color-5;
+  }
+}
+
+// MEDIA QUERIES***********************
+
+//Min-width 576px
+@media (min-width: 576px) {
+  section#home {
+    h1 {
+      font-size: $md-font;
+    }
+  }
+  section#about,
+  section#projects,
+  section#contact {
+    h2 {
+      font-size: $md-font;
+    }
+  }
+}
+
+//Min-width 768px
+@media (min-width: 768px) {
+  section#home {
+    h1 {
+      font-size: $lg-font;
+    }
+  }
+  section#about,
+  section#projects,
+  section#contact {
+    h2 {
+      font-size: $lg-font;
+    }
+  }
+}
+
+//Min-width 992px
+@media (min-width: 992px) {
+  section#about {
+    h2 {
+      text-align: left !important;
+    }
+    .profile {
+      max-width: 33.333333%;
+      margin-left: 0;
+    }
+    article {
+      max-width: 35rem;
+    }
+  }
+  section#projects {
+    h2 {
+      text-align: left !important;
+      transform: rotate(-90deg);
+      align-self: flex-end;
+      margin: 0 auto 0 -6rem;
+    }
+    .carousel-inner {
+      justify-content: left;
+      display: flex;
+    }
+    article {
+      max-width: 35rem;
+      margin: 0 0 0 auto;
+    }
+    .carousel-control-prev {
+      left: 5%;
+    }
+  }
+}
+
+//Min-width 1200px
+@media (min-width: 1200px) {
+  section#home {
+    h1 {
+      font-size: $xl-font;
+    }
+  }
+  section#about {
+    h2 {
+      font-size: $xl-font;
+    }
+    .profile {
+      align-self: flex-start;
+    }
+  }
+  section#projects {
+    h2 {
+      font-size: $xl-font;
+    }
+    .carousel-control-prev {
+      left: 20%;
+    }
+  }
+  section#contact {
+    h2 {
+      font-size: $xl-font;
+    }
+  }
+}

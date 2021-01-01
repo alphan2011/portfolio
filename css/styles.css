@@ -20,6 +20,10 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
 }
@@ -32,17 +36,9 @@ body {
   max-width: 3rem;
 }
 
-section#home {
-  height: 100vh;
-}
-
-section#home .title {
-  margin: 0 auto;
-}
-
 section#home h1 {
   font-family: "Spartan", sans-serif;
-  font-size: 3.6rem;
+  font-size: 3.2rem;
   font-weight: 700;
   color: #f58f7c;
 }
@@ -52,10 +48,6 @@ section#home h2 {
   font-size: 1.6rem;
 }
 
-section#home .arrows {
-  margin-top: 3rem;
-}
-
 .sticky {
   position: fixed;
   top: 0;
@@ -63,8 +55,6 @@ section#home .arrows {
 }
 
 section#about {
-  width: 100%;
-  margin: auto;
   padding: 9rem 0;
   background-color: #000000;
 }
@@ -72,7 +62,6 @@ section#about {
 section#about .profile {
   width: 100%;
   max-width: 30rem;
-  margin: 0 auto 3rem 0;
   -webkit-animation-name: grow;
           animation-name: grow;
   -webkit-animation-duration: 3s;
@@ -89,28 +78,21 @@ section#about .profile {
 
 section#about h2 {
   font-family: "Spartan", sans-serif;
-  font-size: 3.6rem;
+  font-size: 3.2rem;
   font-weight: 700;
   color: #f2c4ce;
   margin-bottom: 6rem;
 }
 
-section#about article {
-  max-width: 30rem;
-  margin: 0 0 0 auto;
-}
-
 section#about h3 {
   font-family: "Spartan", sans-serif;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 300;
   text-transform: uppercase;
   color: #f58f7c;
-  margin-bottom: 1rem;
 }
 
 section#about p {
-  font-weight: 700;
   color: #ffffff;
 }
 
@@ -125,22 +107,205 @@ section#about .btn-outline-secondary {
   border-color: #f58f7c;
 }
 
-section#about .arrows {
-  display: block;
-  margin: 3rem auto 0 auto;
-}
-
 section#projects {
-  width: 100%;
-  margin: auto;
   padding: 9rem 0;
+  background-color: #f58f7c;
 }
 
 section#projects h2 {
   font-family: "Spartan", sans-serif;
-  font-size: 3.6rem;
+  font-size: 3.2rem;
   font-weight: 700;
-  color: #2c2c2c;
+  color: #ffffff;
   margin-bottom: 6rem;
+}
+
+section#projects h3 {
+  font-family: "Spartan", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #2c2c2c;
+  margin-bottom: 3rem;
+}
+
+section#projects img {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+section#projects h4 {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+section#projects .btn:hover {
+  background-color: #f2c4ce;
+  color: #ffffff;
+}
+
+section#projects .btn-secondary {
+  background-color: #2c2c2c;
+  border-radius: 0px;
+  border: none;
+  margin-bottom: 3rem;
+}
+
+section#projects .carousel-control-next,
+section#projects .carousel-control-prev {
+  top: inherit;
+  bottom: inherit;
+}
+
+section#projects .arrows {
+  margin: 12rem auto 0;
+}
+
+section#contact {
+  padding: 9rem 0;
+}
+
+section#contact h2 {
+  font-family: "Spartan", sans-serif;
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #4f4f51;
+}
+
+section#contact p {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #f2c4ce;
+  margin-bottom: 6rem;
+}
+
+section#contact form {
+  max-width: 30rem;
+}
+
+section#contact input,
+section#contact textarea {
+  margin-bottom: 1rem;
+  border-radius: 0;
+}
+
+section#contact textarea {
+  height: 9rem;
+}
+
+section#contact .btn-outline-secondary {
+  color: #f58f7c;
+  border-color: #f58f7c;
+}
+
+section#contact .btn-outline-secondary:hover {
+  color: #ffffff;
+  background-color: #f58f7c;
+}
+
+section#contact .btn-secondary {
+  color: #ffffff;
+  background-color: #f58f7c;
+  border-color: #f58f7c;
+}
+
+section#contact .btn-secondary:hover {
+  background-color: #f37862;
+  border-color: #f37862;
+}
+
+footer {
+  background-color: #000000;
+}
+
+footer img {
+  max-width: 3rem;
+}
+
+footer p {
+  color: #4f4f51;
+}
+
+@media (min-width: 576px) {
+  section#home h1 {
+    font-size: 6.4rem;
+  }
+  section#about h2,
+  section#projects h2,
+  section#contact h2 {
+    font-size: 6.4rem;
+  }
+}
+
+@media (min-width: 768px) {
+  section#home h1 {
+    font-size: 8rem;
+  }
+  section#about h2,
+  section#projects h2,
+  section#contact h2 {
+    font-size: 8rem;
+  }
+}
+
+@media (min-width: 992px) {
+  section#about h2 {
+    text-align: left !important;
+  }
+  section#about .profile {
+    max-width: 33.333333%;
+    margin-left: 0;
+  }
+  section#about article {
+    max-width: 35rem;
+  }
+  section#projects h2 {
+    text-align: left !important;
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    margin: 0 auto 0 -6rem;
+  }
+  section#projects .carousel-inner {
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  section#projects article {
+    max-width: 35rem;
+    margin: 0 0 0 auto;
+  }
+  section#projects .carousel-control-prev {
+    left: 5%;
+  }
+}
+
+@media (min-width: 1200px) {
+  section#home h1 {
+    font-size: 9.6rem;
+  }
+  section#about h2 {
+    font-size: 9.6rem;
+  }
+  section#about .profile {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+  section#projects h2 {
+    font-size: 9.6rem;
+  }
+  section#projects .carousel-control-prev {
+    left: 20%;
+  }
+  section#contact h2 {
+    font-size: 9.6rem;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
