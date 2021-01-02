@@ -36,6 +36,11 @@ body {
   max-width: 3rem;
 }
 
+.badges {
+  max-width: 2rem;
+  margin-right: 1rem;
+}
+
 section#home h1 {
   font-family: "Spartan", sans-serif;
   font-size: 3.2rem;
@@ -74,6 +79,13 @@ section#about .profile {
           animation-direction: alternate;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
+}
+
+section#about h4 {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
 }
 
 section#about h2 {
@@ -256,8 +268,14 @@ footer p {
     text-align: left !important;
   }
   section#about .profile {
-    max-width: 33.333333%;
-    margin-left: 0;
+    max-width: 66.666666%;
+    margin: 0 !important;
+  }
+  section#about .badge-wrap {
+    margin-left: 2rem;
+  }
+  section#about .badges {
+    margin-right: 1.5rem;
   }
   section#about article {
     max-width: 35rem;
@@ -297,6 +315,9 @@ footer p {
   section#about .profile {
     -ms-flex-item-align: start;
         align-self: flex-start;
+  }
+  section#about .badge-wrap {
+    margin-left: 4rem;
   }
   section#projects h2 {
     font-size: 9.6rem;

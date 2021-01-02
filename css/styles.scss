@@ -66,6 +66,11 @@ body {
   max-width: 3rem;
 }
 
+.badges {
+  max-width: 2rem;
+  margin-right: 1rem;
+}
+
 //Home/Header + Nav
 section#home {
   h1 {
@@ -97,6 +102,10 @@ section#about {
     animation-delay: 0;
     animation-direction: alternate;
     animation-iteration-count: infinite;
+  }
+  h4 {
+    @include xsHeading();
+    color: $color-6;
   }
   h2 {
     @include lgHeading();
@@ -255,8 +264,14 @@ footer {
       text-align: left !important;
     }
     .profile {
-      max-width: 33.333333%;
-      margin-left: 0;
+      max-width: 66.666666%;
+      margin: 0 !important;
+    }
+    .badge-wrap {
+      margin-left: 2rem;
+    }
+    .badges {
+      margin-right: 1.5rem;
     }
     article {
       max-width: 35rem;
@@ -296,6 +311,9 @@ footer {
     }
     .profile {
       align-self: flex-start;
+    }
+    .badge-wrap {
+      margin-left: 4rem;
     }
   }
   section#projects {
