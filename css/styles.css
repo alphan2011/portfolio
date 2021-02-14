@@ -41,6 +41,10 @@ body {
   margin-right: 1rem;
 }
 
+nav .nav-link:hover {
+  color: #f58f7c !important;
+}
+
 section#home h1 {
   font-family: "Spartan", sans-serif;
   font-size: 3.2rem;
@@ -55,8 +59,10 @@ section#home h2 {
 
 .sticky {
   position: fixed;
+  right: 0;
+  left: 0;
   top: 0;
-  width: 100%;
+  z-index: 1000;
 }
 
 section#about {
@@ -132,6 +138,10 @@ section#projects h2 {
   margin-bottom: 6rem;
 }
 
+section#projects .carousel-inner {
+  margin-bottom: 3rem;
+}
+
 section#projects h3 {
   font-family: "Spartan", sans-serif;
   font-size: 1.6rem;
@@ -151,6 +161,10 @@ section#projects h4 {
   font-weight: 700;
   text-transform: uppercase;
   color: #ffffff;
+}
+
+section#projects p {
+  margin-bottom: 3rem;
 }
 
 section#projects .btn:hover {
@@ -173,6 +187,10 @@ section#projects .carousel-control-prev {
 
 section#projects .arrows {
   margin: 12rem auto 0;
+}
+
+section#projects span {
+  color: #ffffff;
 }
 
 section#contact {

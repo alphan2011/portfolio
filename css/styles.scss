@@ -72,6 +72,11 @@ body {
 }
 
 //Home/Header + Nav
+nav {
+  .nav-link:hover {
+    color: $color-1 !important;
+  }
+}
 section#home {
   h1 {
     @include lgHeading();
@@ -82,11 +87,12 @@ section#home {
     font-size: 1.6rem;
   }
 }
-
 .sticky {
   position: fixed;
+  right: 0;
+  left: 0;
   top: 0;
-  width: 100%;
+  z-index: 1000;
 }
 
 //About
@@ -138,6 +144,9 @@ section#projects {
     color: $color-6;
     margin-bottom: 6rem;
   }
+  .carousel-inner {
+    margin-bottom: 3rem;
+  }
   h3 {
     @include smHeading();
     color: $color-2;
@@ -150,6 +159,9 @@ section#projects {
   h4 {
     @include xsHeading();
     color: $color-6;
+  }
+  p {
+    margin-bottom: 3rem;
   }
   .btn:hover {
     background-color: $color-4;
@@ -168,6 +180,9 @@ section#projects {
   }
   .arrows {
     margin: 12rem auto 0;
+  }
+  span {
+    color: $color-6;
   }
 }
 //Contact
